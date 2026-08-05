@@ -1,0 +1,6 @@
+git clone 
+git add . --adiciona o que foi alterado ao stage
+git status
+git commit -m "" ## as aspas é comentário
+git push 
+.
