@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #76b0ba;
+    --bg-color: #d1d9e1;
+    --card-bf: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #2ee8f0;
+    --radius: 12px;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+padding: 3rem 2rem;
+border-radius: var(--radius);
+margin-bottom: 2rem;
+box-shadow: 0 10px 15px -3px var(--border-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    color: rgb(232, 10, 10);
+  text-shadow: 
+    2px 2px 4px rgba(62, 6, 96, 0.6), 
+    4px 4px 8px rgba(181, 8, 68, 0.4), 
+    6px 6px 12px rgba(97, 10, 108, 0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 2rem 0;
+
+}
+
+nav{
+    background: var(--card-bf);
+    padding: 1.25rem 1.5rem;
+    border: 0 2px 3px 0 var(--border-color);
+}
+nav h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+}
