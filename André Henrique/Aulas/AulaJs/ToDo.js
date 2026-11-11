@@ -1,31 +1,28 @@
-const input = document.querySelector('#taskInput');
-const button = document.querySelector('#addTaskButton');
-const taskList = document.querySelector('#taskList');
+const input = document.querySelector("#input-tarefa");
+const btn = document.querySelector("#btn-adicionar");
+const lista = document.querySelector("#lista-tarefas");
 
+let listaTarefas = [];
 
-let tasks = [];
+function adicionar() {
+  const texto = input.value;
+  if (!texto) return;
 
-function addTask() {
-    const text = input.value;
-    if (!text)   return;
-    const task = {id: Date.now(), text, completed: false};
-    tasks.push(task);
-    renderTasks(tasks);
+  const tarefaObj = { id: Date.now(), texto, concluido: false };
+  listaTarefas.push(tarefaObj);
+  renderizar(tarefaObj);
 }
 
-function renderTasks(tasksList) {
-    const li = document.createElement('li');
-    li.className = 'task-item';
-    li.dataset.id = tasksList.id;
-    li.innerHTML = `
-        <span class="task-text">${tasksList.text}</span>
-        <button class="btn btn-sm btn-outline-success" data-action="complete">OK</button>
-        <button class="btn btn-sm btn-outline-danger" data-action="delete">X</button>
-    `;
-    
-    li.querySelector(".text").textContent = tasksList.text;
-    taskList.appendChild(li);
+function renderizar(tarefa) {
+  const li = document.createElement("li");
+  li.className = "todo-item";
+  li.dataset.id = tarefa.id;
+  li.innerHTML = `<span class="texto"></span>
+    <button class="btn btn-sm btn-outline-success" data-acao="concluir">OK</button>
+    <button class="btn btn-sm btn-outline-danger" data-acao="excluir">X</button>`;
+
+  li.querySelector(".texto").textContent = tarefa.texto;
+  lista.appendChild(li);
 }
 
-
-button.addEventListener('click', addTask);
+btn.addEventListener("click", adicionar);
