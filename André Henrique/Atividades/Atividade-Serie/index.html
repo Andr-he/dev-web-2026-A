@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suits - Série</title>
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* Ajuste simples para as imagens dos cards terem o mesmo tamanho */
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- HEADER com Breadcrumb e Título -->
+    <header class="bg-dark text-white pt-3 pb-4">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-info">Início</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-info">Séries</a></li>
+                    <li class="breadcrumb-item active text-light" aria-current="page">Suits</li>
+                </ol>
+            </nav>
+            <h1 class="display-3 fw-bold">Suits</h1>
+            <p class="lead">Dois advogados. Um segredo. Nenhuma licença para advogar.</p>
+        </div>
+    </header>
+
+    <!-- MAIN Content -->
+    <main>
+        
+        <!-- SECTION 1: Carousel -->
+        <section class="container my-5">
+            <div id="suitsCarousel" class="carousel slide shadow" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#suitsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#suitsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#suitsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Ambiente de escritório de advocacia">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>A Firma</h5>
+                            <p>O mundo implacável da advocacia corporativa em Nova Iorque.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Homem de fato elegante">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Harvey Specter</h5>
+                            <p>O melhor negociador de Nova Iorque.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Reunião de negócios">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Uma Dupla Imbatível</h5>
+                            <p>Harvey e Mike enfrentam os maiores desafios jurídicos juntos.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#suitsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#suitsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Sinopse -->
+        <section class="container my-5">
+            <div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+                <div class="container-fluid py-2">
+                    <h2 class="display-6 fw-bold">Sinopse</h2>
+                    <p class="col-md-10 fs-5 mt-3">
+                        Enquanto foge de um negócio de drogas que correu mal, Mike Ross, um jovem brilhante que abandonou a faculdade, consegue infiltrar-se numa entrevista de emprego com um dos melhores advogados de Nova Iorque, Harvey Specter. 
+                        Cansado dos graduados tradicionais das faculdades de direito, Harvey arrisca e contrata Mike pela sua memória fotográfica e inteligência inegável. Juntos, tornam-se uma dupla vencedora, mas têm de manter o segredo de Mike a salvo de toda a firma.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Elenco (Cards) -->
+        <section class="container my-5">
+            <h2 class="fw-bold mb-4 border-bottom pb-2">Elenco Principal</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <!-- Imagem representativa para o personagem -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" class="card-img-top" alt="Harvey Specter">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Harvey Specter</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Gabriel Macht</h6>
+                            <p class="card-text">O "closer" mais implacável de Nova Iorque e sócio sénior da Pearson Hardman. É conhecido pelos seus fatos impecáveis e excesso de confiança.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" class="card-img-top" alt="Mike Ross">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mike Ross</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Patrick J. Adams</h6>
+                            <p class="card-text">Um jovem com memória fotográfica prodigiosa que trabalha como advogado associado, apesar de nunca ter frequentado a faculdade de direito.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" class="card-img-top" alt="Donna Paulsen">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Donna Paulsen</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Sarah Rafferty</h6>
+                            <p class="card-text">A secretária e confidente de Harvey. Donna sabe sempre tudo o que acontece no escritório antes de todos os outros.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" class="card-img-top" alt="Louis Litt">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Louis Litt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Rick Hoffman</h6>
+                            <p class="card-text">O rival interno de Harvey. Brilhante em finanças, mas emocionalmente inseguro, luta constantemente pelo reconhecimento na firma.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" class="card-img-top" alt="Rachel Zane">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Rachel Zane</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Meghan Markle</h6>
+                            <p class="card-text">Uma talentosa paralegal na Pearson Hardman que sonha ser advogada, mas lida com a pressão do legado do seu pai.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop" class="card-img-top" alt="Jessica Pearson">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Jessica Pearson</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Gina Torres</h6>
+                            <p class="card-text">A formidável sócia-gerente da firma. Uma líder forte que mantém a ordem no escritório e protege os seus advogados.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">Trabalho Académico - 3ª Avaliação Oficial: Página de Série</p>
+            <small class="text-secondary">Desenvolvido com HTML5 e Bootstrap 5</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
