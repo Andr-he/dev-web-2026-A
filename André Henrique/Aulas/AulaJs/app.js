@@ -1,65 +1,62 @@
-var ola = "Olá, mundo JS!";
-
-//cme
+var ola = "Olá Mundo JS";
+// Se precisar comentar
 console.log(ola);
 console.info(ola);
 console.error(ola);
 
-
 function log(valor) {
-    console.info(valor);
+  console.info(valor);
 }
 
+//Tipos de variáveis
 
-//tipo variavel
 var valor = 10;
 log(typeof valor);
 
 var palavra = "oi";
 log(typeof palavra);
 
-var meuObj = {}
+var meuObj = {};
 log(typeof meuObj);
 
-var meuArray = []
+var meuArray = [];
 log(typeof meuArray);
 
 var nulo = null;
-log(typeof nulo);  
+log(typeof nulo);
 
 var indefinido;
-log(typeof indefinido); 
+log(typeof indefinido);
 
-//operações simples
+//Operações simples
 const n1 = 1;
 const n2 = 5;
-const valorNumnericoStr = "5";
+const valorNumericoStr = "5";
 
 log(n1 + n2);
 log(n1 * n2);
 log(n1 / n2);
 
-//operações lógicas
+//Operações lógicas
+
 log(n1 == n2);
-log(n2 == valorNumnericoStr);
-log(n2 === valorNumnericoStr);
+log(n2 == valorNumericoStr);
+log(n2 === valorNumericoStr);
 
+log((n2 > n1 || n1 > n2) && 1 > 2);
 
-log((n2 > n1 || n1 > n2) && 1>2);
-
-const instituicao = "ceub";
+const instituicao = "CEUB";
 
 switch (instituicao) {
-    case "ceub":
-        log("FACULDADE");
-        break;
-    case "CEM10":
-        log("ESCOLA");
-        break;
-    case "CIL":
-        log("ESCOLA DE LINGUAS");
-        break;
-    default:
-        log("INSTITUIÇÃO NÃO CADASTRADA");
+  case "CEUB":
+    log("FACULDADE");
+    break;
+  case "CEM10":
+    log("ESCOLA");
+    break;
+  case "CIL":
+    log("ESCOLA DE LÍNGUAS");
+    break;
+  default:
+    log("Não encontrei o tipo");
 }
-
