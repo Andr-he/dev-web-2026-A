@@ -4,7 +4,7 @@ Projeto final desenvolvido para a disciplina de **Desenvolvimento Web**, apresen
 
 ## 🔗 Site Publicado (GitHub Pages)
 
-- **GitHub Pages:** https://andr-he.github.io/dev-web-2026-A/Andr%C3%A9%20Henrique/Projeto%20final/
+- **GitHub Pages:** [https://andr-he.github.io/dev-web-2026-A/Andr%C3%A9%20Henrique/Projeto%20final/](https://andr-he.github.io/Pages/)
 
 ## ✨ Funcionalidades Implementadas
 
