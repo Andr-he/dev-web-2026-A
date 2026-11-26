@@ -1,0 +1,204 @@
+/* ══════════════════════════════════════════════════════════════════
+   PORTFÓLIO PESSOAL — estilo.css
+   Tema claro e moderno para André Henrique
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ─── VARIÁVEIS DE COR (tema claro) ──────────────────────────────── */
+:root {
+  --cor-primaria:   #2563eb;
+  --cor-secundaria: #e74c6f;
+
+  --fundo:           #f0f4f8;
+  --superficie:      #e2e8f0;
+  --superficie-alta: #ffffff;
+  --borda:           #cbd5e1;
+
+  --texto:       #1e293b;
+  --texto-suave: #64748b;
+}
+
+/* ─── BASE ──────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ─── OVERRIDE Bootstrap text-* utilities for light theme ───────── */
+.text-white  { color: var(--texto) !important; }
+.text-secondary { color: var(--texto-suave) !important; }
+.text-primary { color: var(--cor-primaria) !important; }
+
+/* ─── Bootstrap btn-primary override ─────────────────────────────── */
+.btn-primary {
+  background-color: var(--cor-primaria) !important;
+  border-color: var(--cor-primaria) !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+}
+.btn-outline-primary {
+  color: var(--cor-primaria) !important;
+  border-color: var(--cor-primaria) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--cor-primaria) !important;
+  color: #fff !important;
+}
+
+/* ─── CLASSES DE FUNDO ──────────────────────────────────────────── */
+.bg-fundo      { background-color: var(--fundo) !important; }
+.bg-superficie { background-color: var(--superficie) !important; }
+
+/* ─── CARDS REUTILIZÁVEIS ───────────────────────────────────────── */
+.card-dark {
+  background-color: var(--superficie-alta);
+}
+
+.card-stat {
+  background-color: var(--fundo);
+  border-color: var(--borda) !important;
+}
+
+.card-skill {
+  background-color: var(--superficie-alta);
+}
+
+.card-footer-dark {
+  background-color: transparent;
+  border-color: var(--borda);
+}
+
+/* ─── NAVBAR ────────────────────────────────────────────────────── */
+.navbar-portfolio {
+  background-color: rgba(240, 244, 248, 0.95) !important;
+  border-bottom: 1px solid var(--borda);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-portfolio .bi-list {
+  color: var(--texto) !important;
+}
+
+/* ─── HERO ──────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #dbeafe 0%, #f0f4f8 50%, #ede9fe 100%);
+}
+
+.foto-perfil {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--cor-primaria);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2);
+}
+
+.hero-nome {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--texto);
+}
+
+@media (min-width: 992px) {
+  .foto-perfil { width: 340px; height: 340px; }
+  .hero        { padding-top: 88px; }
+}
+
+@media (max-width: 575px) {
+  .hero-nome { font-size: 2.5rem; }
+}
+
+/* ─── TÍTULO DE SEÇÃO (linha colorida embaixo) ──────────────────── */
+.titulo-secao {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+  margin-bottom: 2rem;
+  color: var(--texto) !important;
+}
+
+.titulo-secao::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 48px; height: 4px;
+  background-color: var(--cor-primaria);
+  border-radius: 99px;
+}
+
+/* ─── TOPO DO CARD DE PROJETO ───────────────────────────────────── */
+.card-topo {
+  height: 180px;
+  background: linear-gradient(135deg, var(--cor-primaria), #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ─── CARDS DE PROJETO ──────────────────────────────────────────── */
+.projeto-card {
+  background-color: var(--superficie-alta);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.projeto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* ─── CAMPO INVÁLIDO ────────────────────────────────────────────── */
+.campo-invalido { border-color: var(--cor-secundaria) !important; }
+
+/* ─── FORM INPUTS (tema claro) ──────────────────────────────────── */
+.form-control {
+  background-color: var(--superficie-alta);
+  border-color: var(--borda);
+  color: var(--texto);
+}
+.form-control:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+/* ─── PROGRESS BAR ──────────────────────────────────────────────── */
+.progress-bar.bg-primary {
+  background-color: var(--cor-primaria) !important;
+}
+
+/* ─── BADGE ──────────────────────────────────────────────────────── */
+.badge.text-bg-primary {
+  background-color: var(--cor-primaria) !important;
+  color: #fff !important;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────────── */
+footer {
+  background-color: var(--superficie) !important;
+}
+
+/* ─── BTN OUTLINE SECONDARY ──────────────────────────────────────── */
+.btn-outline-secondary {
+  border-color: var(--borda) !important;
+  color: var(--texto-suave) !important;
+}
+.btn-outline-secondary:hover {
+  background-color: var(--cor-primaria) !important;
+  border-color: var(--cor-primaria) !important;
+  color: #fff !important;
+}
